@@ -36,7 +36,7 @@ app.post("/upload", upload.single("file"), async (req, res) => {
       text = file.buffer.toString("utf-8");
     }
 
-    const chunks = text.match(/[^.!?]+[.!?]+/g) || [];
+    const chunks = text.match(/[^.!?]+(?:[.!?](?=\s|$))?/g) || [];
 
     const embeddings = await Promise.all(
       chunks.map(async (chunk) => {
@@ -44,7 +44,7 @@ app.post("/upload", upload.single("file"), async (req, res) => {
           "https://api.openai.com/v1/embeddings",
           {
             input: chunk,
-            model: "text-embedding-ada-002",
+            model: process.env.OPENAI_MODEL,
           },
           {
             headers: { Authorization: `Bearer ${process.env.OPENAI_API_KEY}` },
@@ -81,7 +81,7 @@ app.post("/ask", express.json(), async (req, res) => {
       "https://api.openai.com/v1/embeddings",
       {
         input: question,
-        model: "text-embedding-ada-002",
+        model: process.env.OPENAI_MODEL,
       },
       {
         headers: { Authorization: `Bearer ${process.env.OPENAI_API_KEY}` },

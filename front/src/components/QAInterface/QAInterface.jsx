@@ -17,7 +17,7 @@ const QAInterface = () => {
             const matches = response.data.matches || [];
 
             matches.forEach((match) => {
-                setChatHistory((prev) => [...prev, { type: 'answer', text: match.text }]);
+                setChatHistory((prev) => [...prev, { type: 'answer', text: match.text, score:parseFloat(match.score.toFixed(2))}]);
             });
         } catch (err) {
             console.error(err);
@@ -62,6 +62,7 @@ const QAInterface = () => {
                             }`}
                         >
                             {entry.text}
+                            {entry.type === 'answer' && <p>Score: {entry.score}</p>}
                         </div>
                     </div>
                 ))}

@@ -47,3 +47,27 @@ Demo AI chat with uploading documents (.txt, .pdf)
 ---
 
 Ensure all environment variables are correctly configured before starting the server.
+
+### Running the Python Script
+
+This Python script performs basic topic modeling on ingested documents and updates the metadata of those documents in Pinecone with the extracted topics.
+
+#### Steps to Run the Python Script:
+
+1. **Navigate to the `python` directory:**
+   ```bash
+   cd python
+
+2. **Install the necessary dependencies: Make sure you have all the required Python dependencies installed. You can do this using pip:**
+    ```bash
+   pip install -r requirements.txt
+
+3. **Set up your environment variables: Create a `.env` file and add the following configuration:**
+    ```bash
+   OPENAI_API_KEY=your_openai_api_key
+   PINECONE_API_KEY=your_pinecone_api_key
+   PINECONE_INDEX=your_pinecone_index
+
+4. **Run the `main.py` script: After setting up your environment, execute the Python script:**
+    ```bash
+   python3 main.py

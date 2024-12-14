@@ -1,0 +1,53 @@
+.upload-container {
+    width: 50%;
+    margin: 0 auto 50px;
+    font-family: Arial, sans-serif;
+}
+
+.upload-box {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.upload-title {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.upload-input {
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 95%;
+    margin: 0 auto 20px;
+}
+
+.upload-button {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.upload-status {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.status-failed {
+    color: red;
+}
+
+.status-success {
+    color: green;
+}

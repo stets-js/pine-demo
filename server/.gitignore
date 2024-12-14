@@ -1,0 +1,34 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE and Editor directories
+.idea/
+.vscode/
+*.sublime-workspace
+
+# Build directories
+dist/
+build/
+*.tmp/
+
+# Pinecone index files (optional, if you are storing locally)
+pinecone-index/
+
+# Package lock files (optional, if you use yarn)
+package-lock.json
+yarn.lock

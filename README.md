@@ -33,7 +33,7 @@ Demo AI chat with uploading documents (.txt, .pdf)
      OPENAI_API_KEY=your_openai_api_key
      OPENAI_MODEL=your_openai_model
      PINECONE_API_KEY=your_pinecone_api_key
-     PINECONE_ENVIRONMENT="us-east-1"
+     PINECONE_ENVIRONMENT="environment"
      PINECONE_INDEX="index_name"
      PORT=your_server_port
      ```
